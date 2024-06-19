@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Reconciliation</title>
+    <script src="https://unpkg.com/htmx.org@1.4.0"></script>
+</head>
+<body>
+    <h1>File Reconciliation</h1>
+    <form hx-post="/upload" hx-encoding="multipart/form-data" hx-swap="outerHTML:swap">
+        <label for="csv_file">CSV File:</label>
+        <input type="file" id="csv_file" name="csv_file"><br><br>
+        <label for="excel_file">Excel File:</label>
+        <input type="file" id="excel_file" name="excel_file"><br><br>
+        <button type="submit">Reconcile</button>
+    </form>
+    <div id="swap">
+        <!-- The result will be inserted here -->
+    </div>
+</body>
+</html>
